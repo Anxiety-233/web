@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "http://vip.xa.frp.one:55040/api/:path*"
+      "destination": "http://198.18.0.1:8080/api/:path*"
     }
   ]
 }
