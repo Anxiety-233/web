@@ -1,0 +1,40 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+
+spring:
+  # MySQL 数据库配置（只改这里的密码！！！）
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/lab_equipment?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+
+  # Redis 配置（已经完美适配，不用改！）
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      password:
+      database: 0
+      timeout: 10000ms
+
+# MyBatis-Plus 配置（不用改）
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      id-type: auto
+
+jwt:
+  secret: labEquipment2025@SecretKey_abc123xyz
+  access-token-expire: 3600000
+  refresh-token-expire: 86400000
+  blacklist-prefix: 'jwt:blacklist:'
+  refresh-token-prefix: 'jwt:refresh_token:'
+anti-replay:
+  expire: 300000
+  nonce-prefix: 'anti_replay:nonce:'
