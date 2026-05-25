@@ -18,7 +18,7 @@ export default defineConfig({
     ],
     proxy: {      
         '/api': {        
-          target: 'http://vip.hb.frp.one:10015',
+          target: 'http://vip.xa.frp.one:55040',
           changeOrigin: true,        
           secure: false,
       }
