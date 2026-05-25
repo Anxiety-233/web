@@ -14,12 +14,11 @@ export default defineConfig({
     host:'0.0.0.0',
     allowedHosts: [
       'anxiety12.fucku.top',
-      'anxiety12.top',
-      'vip.xa.frp.one'
+      'https://web-lilac-zeta-79.vercel.app'
     ],
     proxy: {      
         '/api': {        
-          target: 'http://hn.frp.one:38654',        
+          target: 'http://vip.hb.frp.one:10015',
           changeOrigin: true,        
           secure: false,
       }

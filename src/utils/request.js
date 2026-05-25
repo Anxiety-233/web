@@ -2,10 +2,9 @@ import axios from 'axios';
 import { v4 as uuidv4 } from 'uuid';
 
 const request = axios.create({
-    // 等后端配好 HTTPS 后，把这里改成真实的 https:// 后端地址
     baseURL: 'https://localhost:8000/api',
     timeout: 5000,
-    withCredentials: true // 允许携带 HttpOnly Cookie
+    withCredentials: true
 });
 
 let isRefreshing = false;
